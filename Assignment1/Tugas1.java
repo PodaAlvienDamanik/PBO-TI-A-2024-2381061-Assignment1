@@ -9,20 +9,20 @@ public class Tugas1 {
         System.out.print("Masukkan jumlah elemen array: ");//meminta user memasukkan banyak array yang ingin dibuat
         int n = scanner.nextInt();
 
-        int[] array = new int[n];//mengubah angka input user ke dalam array
+        int[] array = new int[n];//mengubah int
 
-        System.out.println("Masukkan " + n + " elemen array:");//Memasukkan angka isi array tersebut
+        System.out.println("Masukkan " + n + " angkanya:");
         for (int i = 0; i < n; i++) {
-            System.out.print("Elemen ke-" + (i + 1) + ": ");
-            array[i] = scanner.nextInt();//isi angka array nya
+            System.out.print("Angka ke-" + (i + 1) + ": ");
+            array[i] = scanner.nextInt();
         }
 
-        int jumlah = 0;//dibuat 0 agar sama dengan jumlah array nya,sehingga ketika ditambah maka angka didalam array akan ditambah dengan indeks array tersebut
+        int sum = 0;
         for (int i = 0; i < n; i++) {
-            jumlah += array[i];
+            sum += array[i];
         }
 
-        System.out.println("Jumlah elemen array adalah: " + jumlah);
+        System.out.println("Jumlah elemen-nya adalah: " + sum);
 
         scanner.close();
     }
