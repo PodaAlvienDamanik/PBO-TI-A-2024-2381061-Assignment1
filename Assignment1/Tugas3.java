@@ -15,7 +15,7 @@ public class Tugas3 {
                 JumlahKata++;
             }
         }
-        System.out.println("jumlah kata dalam camelCase: "+ JumlahKata);
+        System.out.println("jumlah kata dalam camelCase: "+ JumlahKata);//diubah bang salah logika rupanya wkwkwk
         input.close();
     }
 }
