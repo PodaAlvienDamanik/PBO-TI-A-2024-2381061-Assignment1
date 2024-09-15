@@ -1,27 +1,21 @@
 package Assignment1;
 
+import java.util.Scanner;
+
 public class Tugas3 {
     public static void main(String[] args) {
-        String camelCaseString = "saveChangesInTheEditor";
+        Scanner input = new Scanner(System.in);
+        System.out.print("Masukkan kata dalam bentuk camelCase:");
+        String kata = input.nextLine();//nginput string kata
 
-        int wordCount = hitungkatacamelCase(camelCaseString);
+        int JumlahKata = 1;//dimulai 1 karena awalan dari camelCase huruf kecil
 
-        System.out.print(" Jumlah kata: " + wordCount);
-    }
-
-    public static int hitungkatacamelCase(String str) {
-        if (str == null || str.isEmpty()) { //jika tidak ada string maka akan mengembalikan nilai 0
-            return 0;
-        }
-
-        int count = 1; //dimulai dari 1 karena kata camelCase diawali dengan huruf kecil
-
-        for (char c : str.toCharArray()) { //akan mengecek setiap kata yanng ada string dalam bentuk array
-            if (Character.isUpperCase(c)) { //jika ada kata yang diawali dengan huruf kapital maka akan dihitunh sebagai kata baru
-                count++;
+        for (int i= 0; i<kata.length(); i++) {
+            if (Character.isUpperCase(kata.charAt(i))){//ngecek kalau ada kata yang berawalan huruf kapital maka akan dihitung sebagai kata baru
+                JumlahKata++;
             }
         }
-
-        return count;//mengembalikan count ke main untuk diproses di int wordcount dan ditampilkan di sout jumlah kata
+        System.out.println("jumlah kata dalam camelCase: "+ JumlahKata);
+        input.close();
     }
 }
